@@ -1,0 +1,192 @@
+.App {
+    display: flex;
+    justify-content: center;
+    padding: 30px
+}
+
+.grow1 {
+    flex: 1;
+}
+
+.grow2 {
+    flex: 2;
+}
+
+.grow8 {
+    flex: 8;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+.font-gray {
+    color:gray;
+}
+
+.searchDiv {
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+.searchDiv input, button {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.spinner {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-left: 20px solid green;
+    border-top: 20px solid dodgerblue;
+    border-right: 20px solid red;
+    border-bottom: 20px solid yellow;
+    animation-name: spinner;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinner {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+.changeImgIcons {
+    font-size: 40px;
+    position: relative;
+    top: -200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.changeImgIcons div {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.changeImgIcons div:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+.images {
+    height: 400px;
+    width: 400px;
+}
+
+.images img {
+    width: 100%;
+}
+
+.moreImages {
+    display: flex;
+    width: 400px;
+    gap: 20px;
+}
+
+.moreImages img {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.feedback {
+    width: 100%;
+    height: 600px;
+    border: 1px solid gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+
+.oneComment {
+    display: flex;
+    width: 97%;
+    min-height: 150px;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+}
+
+.commentImg img {
+    max-height: 140px;
+}
+
+.starRating img {
+    height: 20px;
+}
+
+.valueOfItem {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.valueOfItem img {
+    width: 100%;
+}
+
+.valueOfItem div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity > div {
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.setQuantity {
+    background-color: #bbbaba;
+    height: 30px;
+    width: 30px;
+    color: #656363;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+

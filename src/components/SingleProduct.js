@@ -26,7 +26,7 @@ const SingleProduct = () => {
         <div>
             {getProduct &&
             <div className="d-flex column">
-                <div className="searchAgain">
+                <div className="searchButtonDiv">
                     <button onClick={() => {navigate("/")}}>Search another item</button>
                 </div>
                 <div className="d-flex">

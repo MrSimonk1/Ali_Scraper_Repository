@@ -181,14 +181,14 @@
     border-radius: 50%;
 }
 
-.searchAgain {
+.searchButtonDiv {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-.searchAgain button {
+.searchButtonDiv button {
     cursor: pointer;
     color: white;
     font-weight: 900;

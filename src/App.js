@@ -9,8 +9,6 @@ function App() {
 
   const [getProduct, setProduct] = useState(null);
 
-
-
   return (
     <div className="App">
         <MyContext.Provider value={{getProduct, setProduct}}>

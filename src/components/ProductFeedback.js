@@ -3,8 +3,10 @@ import React from 'react';
 const ProductFeedback = ({feedback}) => {
 
     function formatDate(date) {
+        const getDate = new Date(date);
+        const newDate = `${getDate.getFullYear()}/${getDate.getMonth()}/${getDate.getDay()} ${getDate.getHours()}:${getDate.getMinutes()}`;
         return (
-            <div>123</div>
+            <div>{newDate}</div>
         )
     }
 
@@ -25,7 +27,9 @@ const ProductFeedback = ({feedback}) => {
                                 </div>
 
                                 <div>{x.content}</div>
-                                <div className="font-gray">{x.date}</div>
+                                <div className="font-gray">
+                                    {formatDate(x.date)}
+                                </div>
                             </div>
                             <div className="grow1 d-flex gap-20 commentImg">
                                 {x.photos.length > 0 && x.photos.map((photo, index) =>

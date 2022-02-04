@@ -3,15 +3,15 @@ import ProductImages from "./ProductImages";
 import ProductFeedback from "./ProductFeedback";
 import ProductVariants from "./ProductVariants";
 import {MyContext} from "../contexts/MyContext";
+import {useNavigate} from "react-router-dom";
 
 const SingleProduct = () => {
 
     const {getProduct} = useContext(MyContext);
-    const [getQuantity, setQuantity] = useState(1)
-    console.log(getProduct)
+    const [getQuantity, setQuantity] = useState(1);
+    const navigate = useNavigate()
     //photos, title, description, comments, price, variants
     //button to go back
-    console.log(getProduct.salePrice.min);
     function fnQuantity(word) {
         if (word === "add") {
             setQuantity(getQuantity + 1);
@@ -26,7 +26,10 @@ const SingleProduct = () => {
         <div>
             {getProduct &&
             <div className="d-flex column">
-                <div className="d-flex grow1">
+                <div className="searchAgain">
+                    <button onClick={() => {navigate("/")}}>Search another item</button>
+                </div>
+                <div className="d-flex">
                     <div className="grow1 d-flex j-center a-center">
                         <ProductImages images={getProduct.images}/>
                     </div>
@@ -74,7 +77,7 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grow2">
+                <div>
                     <ProductFeedback feedback={getProduct.feedback}/>
                 </div>
             </div>}

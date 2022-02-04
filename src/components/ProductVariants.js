@@ -6,6 +6,7 @@ const ProductVariants = ({variants}) => {
     const [getShipping, setShipping] = useState("");
     const [getColor, setColor] = useState("");
     const [getSize, setSize] = useState("");
+    const [getType, setType] = useState("");
     //
 
     useEffect(() => {
@@ -18,6 +19,9 @@ const ProductVariants = ({variants}) => {
             }
             if (x.name === "Ships From") {
                 setShipping(x.values[0].displayName)
+            }
+            if (x.name === "Type") {
+                setType(x.values[0].displayName)
             }
         })
     }, []);
@@ -39,6 +43,11 @@ const ProductVariants = ({variants}) => {
                 <div className="font-gray">{getShipping}</div>
             )
         }
+        if (word === "Type") {
+            return (
+                <div className="font-gray">{getType}</div>
+            )
+        }
     }
 
     function changeChoice(category, choice) {
@@ -52,6 +61,9 @@ const ProductVariants = ({variants}) => {
         if (category === "Ships From") {
             setShipping(choice)
         }
+        if (category === "Type") {
+            setShipping(choice)
+        }
     }
 
     function styling(category, choice) {
@@ -59,23 +71,78 @@ const ProductVariants = ({variants}) => {
         if (category === "Color") {
             if (choice === getColor) {
                 return {
-                    border: "5px solid green"
+                    border: "5px solid green",
+                    height: 80,
+                    width: 80,
+                    display: "flex",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    fontSize: 15
                 }
             }
         }
         if (category === "Size") {
             if (choice === getSize) {
                 return {
-                    border: "5px solid green"
+                    border: "5px solid green",
+                    height: 80,
+                    width: 80,
+                    display: "flex",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    fontSize: 15
                 }
             }
         }
         if (category === "Ships From") {
             if (choice === getShipping) {
                 return {
-                    border: "5px solid green"
+                    border: "5px solid green",
+                    height: 80,
+                    width: 80,
+                    display: "flex",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    fontSize: 15
                 }
             }
+        }
+        if (category === "Type") {
+            if (choice === getType) {
+                return {
+                    border: "5px solid green",
+                    height: 80,
+                    width: 80,
+                    display: "flex",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    fontSize: 15
+                }
+            }
+        }
+        return {
+            height: 80,
+            width: 80,
+            display: "flex",
+            textAlign: "center",
+            justifyContent: "center",
+            alignItems: "center",
+            border: "5px solid #c4c4c4",
+            cursor: "pointer",
+            fontWeight: 700,
+            fontSize: 15
         }
 
     }
